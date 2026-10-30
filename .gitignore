@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment Variables (secrets)
+server/.env
+*.env
+.env.*
+
+# Build output
+client/dist/
+client/build/
+
+# Database persistence cache (auto-generated at runtime)
+server/data/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Test artifacts
+server/test_sanity.js

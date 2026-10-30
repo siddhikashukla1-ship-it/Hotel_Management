@@ -1,0 +1,26 @@
+{
+  "name": "hotelpro-fullstack",
+  "version": "1.0.0",
+  "description": "HotelPro - Ultimate Hotel Management & Hospitality Solution",
+  "main": "run-dev.js",
+  "scripts": {
+    "dev": "node run-dev.js",
+    "start": "node server/server.js",
+    "build": "npm --prefix server install && npm --prefix client install && npm --prefix client run build",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client run dev",
+    "install:all": "npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "hotel-management",
+    "hospitality",
+    "react",
+    "express",
+    "mongodb",
+    "jwt",
+    "bootstrap"
+  ],
+  "author": "HotelPro Engineering Team",
+  "license": "ISC"
+}
+

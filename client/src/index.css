@@ -1,0 +1,202 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+:root {
+  --hp-primary: #0b132b;
+  --hp-secondary: #1c2541;
+  --hp-navy-light: #3a506b;
+  --hp-gold: #c5a059;
+  --hp-gold-hover: #b38e47;
+  --hp-gold-light: #f6eedb;
+  --hp-bg-light: #f8fafc;
+  --hp-card-bg: #ffffff;
+  --hp-text-main: #1e293b;
+  --hp-text-muted: #64748b;
+  --hp-border: #e2e8f0;
+  --hp-radius-sm: 8px;
+  --hp-radius-md: 12px;
+  --hp-radius-lg: 16px;
+  --hp-radius-xl: 24px;
+  --hp-shadow-sm: 0 2px 4px rgba(11, 19, 43, 0.04);
+  --hp-shadow-md: 0 8px 24px rgba(11, 19, 43, 0.08);
+  --hp-shadow-lg: 0 16px 36px rgba(11, 19, 43, 0.12);
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--hp-text-main);
+  background-color: var(--hp-bg-light);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Gold Button */
+.btn-gold {
+  background-color: var(--hp-gold);
+  color: #ffffff;
+  border: 1px solid var(--hp-gold);
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--hp-radius-sm);
+  transition: all 0.25s ease;
+}
+
+.btn-gold:hover, .btn-gold:focus {
+  background-color: var(--hp-gold-hover);
+  border-color: var(--hp-gold-hover);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--hp-gold);
+  border: 1.5px solid var(--hp-gold);
+  font-weight: 600;
+  padding: 0.55rem 1.3rem;
+  border-radius: var(--hp-radius-sm);
+  transition: all 0.25s ease;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--hp-gold);
+  color: #ffffff;
+}
+
+.btn-navy {
+  background-color: var(--hp-primary);
+  color: #ffffff;
+  border: 1px solid var(--hp-primary);
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--hp-radius-sm);
+  transition: all 0.25s ease;
+}
+
+.btn-navy:hover {
+  background-color: var(--hp-secondary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(11, 19, 43, 0.25);
+}
+
+/* Luxury Card */
+.hotel-card {
+  background: #ffffff;
+  border: 1px solid var(--hp-border);
+  border-radius: var(--hp-radius-md);
+  box-shadow: var(--hp-shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--hp-shadow-md);
+}
+
+/* Badges */
+.badge-available {
+  background-color: #dcfce7;
+  color: #15803d;
+  font-weight: 600;
+}
+
+.badge-occupied {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.badge-cleaning {
+  background-color: #fef3c7;
+  color: #b45309;
+  font-weight: 600;
+}
+
+.badge-maintenance {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-weight: 600;
+}
+
+.badge-vip-platinum {
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  color: #0f172a;
+  border: 1px solid #94a3b8;
+  font-weight: 700;
+}
+
+.badge-vip-gold {
+  background: linear-gradient(135deg, #fef08a, #facc15);
+  color: #713f12;
+  font-weight: 700;
+}
+
+.badge-vip-silver {
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 600;
+}
+
+/* Hero section */
+.hero-hospitality {
+  position: relative;
+  background: linear-gradient(rgba(11, 19, 43, 0.72), rgba(11, 19, 43, 0.85)),
+    url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: #ffffff;
+  padding: 100px 0 110px 0;
+}
+
+.search-box-floating {
+  background: #ffffff;
+  border-radius: var(--hp-radius-lg);
+  box-shadow: var(--hp-shadow-lg);
+  padding: 24px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Nav styling */
+.navbar-hotelpro {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--hp-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #334155 !important;
+  padding: 0.5rem 0.9rem !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--hp-gold) !important;
+}
+
+/* Print styling for Invoice */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-invoice, .printable-invoice * {
+    visibility: visible;
+  }
+  .printable-invoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
